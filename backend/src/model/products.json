@@ -1,0 +1,382 @@
+[
+  {
+      "id": "1001",
+      "pName": "Asus Zenfone Max Pro M2",
+      "pDescription": "an economical phone by Asus",
+      "pRating": 3.5,
+      "pCategory": "Electronics",
+      "price": 194.99,
+      "color": "Black",
+      "image": "Zenfone Max Pro M2.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Asus@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 7,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1002",
+      "pName": "Redmi Note 6 Pro",
+      "pDescription": "an economical phone by Xiaomi",
+      "pRating": 4,
+      "pCategory": "Electronics",
+      "price": 181.99,
+      "color": "Black",
+      "image": "Redmi note 6 Pro.png",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Xiaomi@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 30,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1003",
+      "pName": "Moto G7 Plus",
+      "pDescription": "a prime phone by Moto",
+      "pRating": 4,
+      "pCategory": "Electronics",
+      "price": 307.87,
+      "color": "Silver",
+      "image": "moto-g7.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Moto@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 0,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1004",
+      "pName": "Lenovo Tab 2 A8-50",
+      "pDescription": "a high end phone by Lenovo",
+      "pRating": 4.5,
+      "pCategory": "Electronics",
+      "price": 259.99,
+      "color": "Blue",
+      "image": "lenovoTab.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Lenovo@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1005",
+      "pName": "iphone 8 plus",
+      "pDescription": "a high end phone by apple",
+      "pRating": 4.9,
+      "pCategory": "Electronics",
+      "price": 1039.99,
+      "color": "Rose Gold",
+      "image": "Iphone 8 plus-1.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Apple@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1006",
+      "pName": "Adidas Running Men Lite",
+      "pDescription": "a pair of light weight running shoes by adidas",
+      "pRating": 4,
+      "pCategory": "Shoes",
+      "price": 33.79,
+      "color": "Grey Blue",
+      "image": "adidas.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Adidas@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 0,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1007",
+      "pName": "Adidas Running Women Lite",
+      "pDescription": "a pair of light weight running shoes by adidas",
+      "pRating": 4,
+      "pCategory": "Shoes",
+      "price": 33.79,
+      "color": "Pink",
+      "image": "Shoes.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Adidas@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1008",
+      "pName": "Adidas Running Men robust",
+      "pDescription": "A perfect pair of robust running shoes by adidas",
+      "pRating": 4,
+      "pCategory": "Shoes",
+      "price": 46.79,
+      "color": "Black",
+      "image": "adidas 1.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Adidas@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1009",
+      "pName": "Reebok training shoes",
+      "pDescription": "A pair of light weight training shoes by Reebok",
+      "pRating": 3,
+      "pCategory": "Shoes",
+      "price": 20.79,
+      "color": "Grey",
+      "image": "Reebok 1.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Reebok@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 8,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1010",
+      "pName": "Nike Running Men Lite",
+      "pDescription": "a pair of running shoes by Nike",
+      "pRating": 4.6,
+      "pCategory": "Shoes",
+      "price": 85.39,
+      "color": "Green",
+      "image": "nike max air.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Nike@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1011",
+      "pName": "Luxury Bed by Zuari",
+      "pDescription": "sunmica finished zuari luxury bed",
+      "pRating": 4,
+      "pCategory": "Furniture",
+      "price": 116.99,
+      "color": "Beige",
+      "image": "Zuari furnitures.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Zuari@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1012",
+      "pName": "Organised Cupboards by Zuari",
+      "pDescription": "sunmica finished zuari cupboards",
+      "pRating": 4.3,
+      "pCategory": "Furniture",
+      "price": 194.99,
+      "color": "Coffee Brown",
+      "image": "Zuari furnitures 1.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Zuari@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1013",
+      "pName": "Dressing Table by Zuari",
+      "pDescription": "sunmica finished zuari Dressing table",
+      "pRating": 4,
+      "pCategory": "Furniture",
+      "price": 111.79,
+      "color": "Beige",
+      "image": "Swann-Dressing-1.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Zuari@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 7,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1014",
+      "pName": "Recliner sofa set by Grihshobha",
+      "pDescription": "A luxurious and comfortable sofa set by Grihshobha furniture makers",
+      "pRating": 4.8,
+      "pCategory": "Furniture",
+      "price": 162.50,
+      "color": "Dark grey",
+      "image": "Recliner furniture 1.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Grihshobha@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1015",
+      "pName": "Dining table by @HOME",
+      "pDescription": "Teak wood dining table with glass top",
+      "pRating": 4.4,
+      "pCategory": "Furniture",
+      "price": 246.99,
+      "color": "caramel",
+      "image": "Dining-Table.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "HOME@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 0,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1016",
+      "pName": "Kurta Plazzo set ethnic for women",
+      "pDescription": "embroidery work kurta plazzo set for women",
+      "pRating": 4,
+      "pCategory": "Clothing",
+      "price": 19.49,
+      "color": "Orange",
+      "image": "Women Ethnic Kurta 1.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Ethnic@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1017",
+      "pName": "Cotton silk saree by FabIndia",
+      "pDescription": "cotton silk hand woven sarees by Fabindia",
+      "pRating": 4.8,
+      "pCategory": "Clothing",
+      "price": 76.70,
+      "color": "White and red",
+      "image": "Saree.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "FabIndia@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 0,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1018",
+      "pName": "Virat's Special for men ethnic",
+      "pDescription": "Festive season special woven black woollen coat for men",
+      "pRating": 4.8,
+      "pCategory": "Clothing",
+      "price": 24.70,
+      "color": "white",
+      "image": "Men ethnic.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "Ethnic@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1019",
+      "pName": "US Polo T-shirt",
+      "pDescription": "100 % pure cotton t shirt by US polo",
+      "pRating": 4.8,
+      "pCategory": "Clothing",
+      "price": 42.89,
+      "color": "Yellow",
+      "image": "US Polo.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "USPolo@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 7,
+          "pShippingCharges": 1.95
+      }
+  },
+  {
+      "id": "1020",
+      "pName": "UCB T-shirt",
+      "pDescription": "100 % pure cotton t shirt by UCB",
+      "pRating": 4.2,
+      "pCategory": "Clothing",
+      "price": 24.70,
+      "color": "Blue",
+      "image": "UCB tshirt.jpg",
+      "specification": "",
+      "dateFirstAvailable": "2012-09-17T00:00:00.000Z",
+      "dateLastAvailable": "2017-09-17T00:00:00.000Z",
+      "pSeller": {
+          "sid": "UCB@Seller",
+          "pDiscount": 0.2,
+          "pQuantity": 666,
+          "pShippingCharges": 1.95
+      }
+  }
+]

@@ -1,0 +1,202 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.backk {
+  background-image:url("./assets/hoopla.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+.app-header {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.login-wrapper {
+  height: 100%;
+  padding-top: 220px;
+  display: flex; /* Sets the container to a flex container */
+  flex-direction: row; /* Sets the main axis direction to be horizontal */
+  justify-content: center; /* Centers the items along the main axis */
+  align-items: center;
+}
+
+.hooplaText {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.box {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 500px;
+}
+
+.box.back {
+  transform: scale(.95);
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  top: -20px;
+  opacity: .8;
+  z-index: -1;
+}
+
+.box:before {
+  content: "";
+  width: 100%;
+  height: 30px;
+  border-radius: 10px;
+  position: absolute;
+  top: -10px;
+  background: rgba(255, 255, 255, .6);
+  left: 0;
+  transform: scale(.95);
+  -webkit-transform: scale(.95);
+  -ms-transform: scale(.95);
+  z-index: -1;
+}
+
+.login-wrapper .example-form {
+  min-width: 100%;
+  max-width: 300px;
+  width: 100%;
+}
+
+.login-wrapper .example-full-width,
+.login-wrapper .btn-block {
+  width: 100%;
+}
+
+.login-wrapper mat-card-header {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+}
+
+.login-wrapper mat-card-header mat-card-title {
+  font-size: 100px;
+  margin: 0;
+}
+
+.login-wrapper .mat-card {
+  padding: 40px 70px 50px;
+}
+
+.login-wrapper .mat-stroked-button {
+  border: 1px solid currentColor;
+  line-height: 54px;
+  background: #FFF7FA;
+}
+
+.login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
+  padding: 0.8375em 0;
+}
+.menu-spacer {
+  flex: 1 1 auto;
+}
+.carouselpos {
+position: relative;
+top: 65px;
+width: 100%;
+}
+
+.carouselheight {
+height:200px;
+}
+.search{
+margin-left:400px
+}
+.productview{
+    /* background-color:  rgb(239, 255, 254); */
+    background-image:none;
+    padding-top: 100px;
+}
+.order{
+  margin-top: 100px;
+  width: 70%;
+  /* background-image: url("./assets/view-orders.png");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  
+}
+.dashboard{
+color: #3f51b5;
+height:90%;
+/* background-color: rgb(239, 255, 254); */
+border-radius: 3px;
+padding-top: 65px;
+}
+.example-fill-remaining-space {
+/* This fills the remaining space, by using flexbox. 
+   Every toolbar row uses a flexbox row layout. */
+display: flex;
+}
+
+.product-cart {  
+position: fixed;
+right: 1em;
+top: 73px;
+width: 350px;
+background-color: #FFF;
+border: 1px solid #CCC;
+box-shadow: 0 5px 15px rgba(0,0,0, 0.2);
+}
+
+.product-cart ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+.product-cart li {
+display: flex;
+flex-flow: row;
+padding: 1em;
+border-bottom: 1px solid #CCC;
+font-size: 14px;
+}
+
+.product-cart img {
+height: 50px;
+width: auto;
+margin-right: 1em;
+}
+
+.product-list__item h4 {
+font-size: 16px;
+}
+
+.product-list__image {
+padding: 1em;
+height: 250px;
+}
+
+.product-list__image img {
+max-width: 100%;
+}
+.iconn{
+font-size: 10px;
+}

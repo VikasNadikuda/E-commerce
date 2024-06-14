@@ -1,0 +1,50 @@
+<div class="backk" *ngIf="data==null">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" >
+    
+        <mat-card class="box" *ngIf="!loggedIn">
+          <mat-card-header>
+            <mat-card-title><h3>Register</h3></mat-card-title>
+          </mat-card-header>
+      
+          <form class="example-form" [formGroup]="registerForm" (ngSubmit)="register()" >
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <input autocomplete="off" matInput placeholder="Enter your First Name" id="fname" formControlName="firstName">
+                </mat-form-field>
+                <div id="firstNameError" *ngIf="registerForm.controls.firstName.invalid">
+                    <span *ngIf="registerForm.controls.firstName.errors?.required && registerForm.controls.firstName.dirty" class="text-danger">Field Required</span>
+                    <span *ngIf="registerForm.controls.firstName.errors?.pattern && registerForm.controls.firstName.dirty" class="text-danger"> Enter valid mail Id </span>
+                  </div>
+                <mat-form-field class="example-full-width">
+                <input matInput autocomplete="off" placeholder="Enter your Last Name" id="lname" formControlName="lastName">
+                </mat-form-field>
+                              
+              <div id="lastNameError" *ngIf="registerForm.controls.lastName.invalid">
+                <span *ngIf="registerForm.controls.lastName.errors?.required && registerForm.controls.lastName.dirty" class="text-danger">Field Required</span>
+                <span *ngIf="registerForm.controls.lastName.errors?.pattern && registerForm.controls.lastName.dirty" class="text-danger"> Enter valid mail Id </span>
+              </div>
+              <mat-form-field class="example-full-width">
+                <input matInput autocomplete="off" placeholder="Enter your email Id" id="email" formControlName="userName">
+              </mat-form-field>
+              <div id="userNameError" *ngIf="registerForm.controls.userName.invalid">
+                <span *ngIf="registerForm.controls.userName.errors?.required && registerForm.controls.userName.dirty" class="text-danger">Field Required</span>
+                <span *ngIf="registerForm.controls.userName.errors?.pattern && registerForm.controls.userName.dirty" class="text-danger"> Enter valid mail Id </span>
+              </div>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" type="password" id="password" formControlName="password">
+              </mat-form-field>
+              <div *ngIf="registerForm.controls.password.errors?.required && registerForm.controls.password.dirty" class="text-danger">Field Required</div>
+            </mat-card-content>
+            <button mat-stroked-button color="primary" type="submit" [disabled]="registerForm.invalid" id="login" class="btn-block">Register</button>
+
+            <div *ngIf="errorMessage!=null" id="errorMessage">
+              <span class="text-danger"> {{errorMessage}} </span>
+          </div>
+          </form>
+        </mat-card>
+    
+      
+      </div>
+    </div>
+      <!-- <app-dashboard *ngIf="data!=null"></app-dashboard> -->
+      

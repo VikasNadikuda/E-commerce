@@ -1,0 +1,86 @@
+<div *ngIf="pdetails" class="productview">
+    <div class="container-fluid toppadding">
+      <div class="row">
+        <!--  [ngStyle]="{align:'right'}" -->
+        <div class="col-sm-5 text-right">
+  
+          <img width="300px" height="250px" [src]="'assets/'+pdetails[0].image" [alt]="pdetails[0].image" alt="" zoom>
+  
+  
+        </div>
+        
+        <div class="col-sm-7" style="border: 1px;">
+          <div class="mb-1 text-secondary font-weight-bold" [ngStyle]="{'font-size':'12px'}">
+            {{pdetails[0].pCategory}}
+  
+  
+          </div>
+          <div class="form-check-inline">
+            <h3>{{pdetails[0].pName}}</h3>
+            
+          </div>
+          <h6>By seller {{pdetails[0].pSeller.sid}}</h6>
+          <br>
+          <h6 class="font-weight-bold">Description:</h6>
+          <div>{{pdetails[0].pDescription}}</div>
+          <br>
+          <h6 class="font-weight-bold">Specification:</h6>
+          <div class="ml-3">
+            <ul>
+              <li>
+                <h6 class="font-weight-bold">Color: &nbsp;{{pdetails[0].color}}</h6>
+              </li>
+            </ul>
+          </div>
+          <h6 class="font-weight-bold">Rating:</h6>
+          <span class="badge bg-warning badge-pill topremove text-light ml-2">{{pdetails[0].pRating}}
+            <mat-icon class="iconn">star</mat-icon>
+        </span>
+          <div class="mt-2">
+            <h4>Price: {{(pdetails[0].price*(1-pdetails[0].pSeller.pDiscount))| currency:'USD'}}</h4>
+          </div>
+          <div class="text-secondary">
+            <del>
+              <h4>{{pdetails[0].price| currency:'USD'}}</h4>
+            </del>
+          </div>
+          <div>
+            <span class="text-warning h6">{{(pdetails[0].pSeller.pDiscount)| percent}} Off</span>
+            <span class="h6">+{{150 | currency:'USD' }} shipping charges</span>
+          </div>
+          <br>
+          <div *ngIf="pdetails[0].pSeller.pQuantity<10 && pdetails[0].pSeller.pQuantity>0">
+            <h6 class="text-danger">Hurry!Only few left</h6>
+          </div>
+          <div class="mt-1"*ngIf="pdetails[0].pSeller.pQuantity!=0">
+            <h6>
+              <span class="font-weight-bold">Quantity left: </span>{{pdetails[0].pSeller.pQuantity}}</h6>
+          </div>
+          <div class="mt-1" *ngIf="pdetails[0].pSeller.pQuantity==0">
+            <h6>
+              <span class="font-weight-bold">Sorry Product Unavailable</span></h6>
+              <div><h6>click below to notify</h6></div>
+          </div>
+          
+          <div class="mt-3" *ngIf="pdetails[0].pSeller.pQuantity!=0">
+            <button class="btn btn-success ml-3 mr-5" mat-raised-button [disabled]="email==null"  (click)="buy()">Buy</button>
+            <button mat-button (click)="goback()"><u>Go Back to home page</u></button>
+          </div>
+          <div *ngIf="successMessage!=null" class="text-success">
+            <br>{{successMessage}} <button  mat-button [routerLink]="['/view-orders']"><u>View-orders</u></button>
+          </div>
+      
+        <div *ngIf="pdetails[0].pSeller.pQuantity==0">
+            <button class="btn btn-warning" mat-raised-button [disabled]="email==null" (click)="notify()">Notify</button>&nbsp;
+            <a [routerLink]="['/login']"  *ngIf="email==null">Please login to get notified when product is available</a><span class="font-weight-bold">{{notificationMessage}}</span>
+        </div>
+        <div *ngIf="email==null && pdetails[0].pSeller.pQuantity!=0" class="text-danger">
+          <a [routerLink]="['/login']">Please Login to Buy</a>
+        </div>
+        
+        </div>
+      </div>
+  
+  
+    </div>
+  </div>

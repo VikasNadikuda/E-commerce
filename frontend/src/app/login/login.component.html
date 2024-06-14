@@ -1,0 +1,47 @@
+<div class="backk" *ngIf="data==null">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" >
+    
+        <mat-card class="box" *ngIf="!loggedIn">
+          <mat-card-header>
+            <mat-card-title><h3>Log in</h3></mat-card-title>
+          </mat-card-header>
+      
+          <form class="example-form" [formGroup]="loginForm" (ngSubmit)="login()" >
+            <mat-card-content>
+              <mat-form-field class="example-full-width">
+                <input autocomplete="off" matInput placeholder="Enter your email Id" id="email" formControlName="userName">
+              </mat-form-field>
+              <div id="userNameError" *ngIf="loginForm.controls.userName.invalid">
+                <span *ngIf="loginForm.controls.userName.errors?.required && loginForm.controls.userName.dirty" class="text-danger">Field Required</span>
+                <span *ngIf="loginForm.controls.userName.errors?.pattern && loginForm.controls.userName.dirty" class="text-danger"> Enter valid mail Id </span>
+              </div>
+              <br>
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" type="password" id="password" formControlName="password">
+              </mat-form-field>
+              <div *ngIf="loginForm.controls.password.errors?.required && loginForm.controls.password.dirty" class="text-danger">Field Required</div>
+            </mat-card-content>
+            <button mat-stroked-button color="primary" type="submit" [disabled]="loginForm.invalid" id="login" class="btn-block">Log in</button>
+            <div class="row mt-2">
+              <a (click)="signInWithGoogle()" style="text-decoration: none;cursor: pointer;">
+                  <div class="card shadow text-center">
+                      <div class="card-body">
+                          <img src="../../../assets/icons8-google-48.png" alt="" height="24px" width="24px"> Sign In with Google
+                      </div>
+                  </div>
+              </a>
+            </div>
+            <div class="row mt-2">
+              <a [routerLink]="['/register']">Sign Up</a>
+              </div>
+            <div *ngIf="errorMessage!=null" id="errorMessage">
+              <span class="text-danger"> {{errorMessage}} </span>
+          </div>
+          </form>
+        </mat-card>
+    
+      
+      </div>
+    </div>
+      <!-- <app-dashboard *ngIf="data!=null"></app-dashboard> -->
+      

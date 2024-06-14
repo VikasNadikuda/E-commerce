@@ -1,0 +1,97 @@
+
+
+<div class="container-fluid">
+    <mat-toolbar class="dashboard">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
+          <mat-icon>menu</mat-icon>
+        </button>
+        
+        
+        <div fxShow="true" fxHide.lt-md *ngFor="let category of categories">
+          <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+          
+          <button href="#" mat-button (click)="viewcategory(category)" >{{category}}</button>          
+        </div> 
+        <div class="col-4">
+    
+        </div>
+        <input *ngIf="search" mat-input type="text" class="form-control" size=2 placeholder="Search for a product" name="search"
+        [(ngModel)]="searchitem" id="searchitem"> &nbsp;&nbsp;
+        <button *ngIf="search"class="mr-4" type="submit" mat-raised-button color="primary" title="Search" (click)="searchItem(searchitem)"><mat-icon>search</mat-icon></button>
+        &nbsp;&nbsp;
+        <!-- <div class="search" >
+          <mat-form-field>
+            <input matInput ><button mat-button><mat-icon>search</mat-icon></button>
+          </mat-form-field>
+        </div> -->
+       
+      
+        
+      </mat-toolbar-row>
+    </mat-toolbar>
+  
+    <mat-sidenav-container  fxFlexFill>
+      <mat-sidenav #sidenav>
+        <mat-nav-list (click)="viewcategory(category)" *ngFor="let category of categories">
+          <a  mat-list-item >{{category}}</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div class="container-fluid" *ngIf="slideshow">
+          <div class="row">
+            <div class="col-10 offset-1 py-3">
+              <ngb-carousel *ngIf="eventList">
+                <ng-template ngbSlide *ngFor="let event of eventList">
+                  <img [src]="event.img" alt="Random slide"  (click)="viewcategory(event.event)" class="d-block w-100" >
+                  <!-- <div class="carousel-caption">
+                    <h3>{{ event.event}}</h3>
+                    <p [innerText]="event.eventDescription"></p>
+                  </div> -->
+                </ng-template>
+              </ngb-carousel>
+            </div>
+          </div>
+        </div>
+      
+        <div *ngIf="cards">
+          <app-category-details></app-category-details>
+      </div>
+      <div *ngIf="viewall ">
+        <div class="container-fluid">
+          
+        <div class="row product-list" style="margin: 1em 0;">         
+      
+      <div class="col-md-3 col-10 product-list__item" *ngFor="let product of allprod; let i = index;">
+        <div class="card mb-4 shadow-sm pd-5"  (click)="prodDesc(product)">
+          <div class="product-list__image">
+           <img class="card-img-top" height="200" width="150" [src]="'../assets/'+product.image" alt="Card image cap">
+          </div>
+
+          <div class="card-body">
+            <a [routerLink]="['Home/',product.pCategory,product.pName]"><h4>{{product.pName}}</h4></a>
+            <p class="card-text">{{product.pDescription}}</p>
+            <div class="text-danger font-weight-bold" *ngIf="product.pSeller.pQuantity==0">Product Unavailable</div>
+            <div class="badge bg-warning badge-pill topremove text-light mt-0">{{product.pRating}}/5
+              <mat-icon class="iconn">star</mat-icon>
+            </div>
+            <div>
+              {{product.price | currency:'USD'}}
+            </div>
+            <span *ngIf="product.pSeller.pQuantity<10 && product.pSeller.pQuantity>0">
+              <h6 class="text-danger font-weight-bold font-weight-bold">Hurry!Only few left</h6>
+            </span>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+    <div *ngIf="!search">
+      <app-search></app-search>
+  </div>
+  
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

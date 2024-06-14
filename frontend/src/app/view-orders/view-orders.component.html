@@ -1,0 +1,51 @@
+<p>view-orders works!</p>
+<!-- <br><br><br><br> -->
+<div class="order">
+    <div class="row" >
+        <div class="offset-5 col-10" *ngIf="length!=0 && email!=null">
+            <h3 style="color: sienna;">My Orders</h3>
+        </div> 
+    </div>
+    <div *ngIf="email==null">
+        <div class="offset-5 col-10" *ngIf="email==null">
+            <a [routerLink]="['/login']"><h4>Please login to view your orders</h4></a>
+        </div> 
+    </div>
+    <!-- <mat-divider></mat-divider>S -->
+    <br>
+    <div class="row"  *ngIf="length==0">
+        <div class="offset-3">
+            <h3 style="text-decoration-color: indigo;">No Orders Yet! <mat-icon>sentiment_very_dissatisfied
+            </mat-icon></h3>
+            <br><br><br><br>
+            <h2 class="text-warning">Book now to avail exclusive discounts!!</h2>
+        </div> 
+    
+    </div>
+    
+    <div class="row" >
+        <div class="offset-3 col-6" *ngFor="let order of orders;let i = index">
+           <div *ngIf="order!=null && order.pname!=null"> 
+            <mat-card  style="border-color: blue;margin:16px" >
+                <div class="row">
+                    <div class="col-6">
+                        <h4>Order Id :</h4>
+                        {{this.orderId+i}}
+                    </div>
+                    <div class="col-6">
+                        <h4>Product name</h4>
+                        <button mat-button><a class="text-primary" (click)="prodDesc(order)">{{order.pname}}</a></button>
+                    </div>
+                </div>
+                <div>
+                    Ordered on &nbsp;<b>{{order.date | date:'fullDate'}}</b>
+                    <div><b>Total price = &nbsp;</b>
+                      {{order.price | currency:"INR"}}</div>
+                </div>
+            </mat-card>
+        </div>
+            <br>
+        </div>
+    </div>
+    </div>
+    

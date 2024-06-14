@@ -1,0 +1,17 @@
+<mat-toolbar color="primary" class="app-header">
+  <div style="margin-left:10px;"><a [routerLink]="['/home']"><img height="40" src="../assets/hoopla logo.png">&nbsp;<span style="color: rgba(243, 243, 30, 0.959);font-size: smaller;font-family:cursive">BingKart</span></a></div>
+  <!-- <span class="nav-tool-items">
+    <button mat-button routerLink="login" *ngIf="">Log in</button>
+  </span> -->
+  <!-- <span class="example-fill-remaining-space"></span> -->
+  <span class="nav-tool-items">
+    <!-- <h6 style="color: rgb(173, 149, 9);">Welcome {{loggedUser}}!</h6> -->
+    <button  mat-button class="hooplaText" (click)="login()" name="login" *ngIf="loggedUser==null"><mat-icon>exit_to_app</mat-icon>Login</button>
+    <!-- <button mat-button class="hooplaText"  *ngIf="loggedUser!=null"><mat-icon>account_circle</mat-icon>{{loggedUser}}</button> -->
+    <button [routerLink]="['/view-orders']" mat-button class="hooplaText"  *ngIf="loggedUser!=null"><mat-icon>shopping_basket</mat-icon>&nbsp;View Orders</button>
+    <button href="#" (click)="logout()" mat-button class="hooplaText"  *ngIf="loggedUser!=null"><mat-icon>power_settings_new</mat-icon>Logout</button>
+  </span>
+  
+</mat-toolbar>
+
+<router-outlet></router-outlet>

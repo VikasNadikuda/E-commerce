@@ -1,0 +1,73 @@
+<div class="container" style="padding-top: 90px;">
+    <div *ngIf="searched">
+    <div class="row product-list" style="margin: 1em 0;">          
+      <div class="col-12">
+      <span><h4>Search Results<mat-icon>&nbsp;&nbsp;search</mat-icon></h4>
+       </span>
+  </div>
+  <mat-divider></mat-divider>
+  
+  <div class="col-sm-12 col-md-6 col-lg-4 product-list__item" *ngFor="let product of searchDetails; let i = index;">
+    <div class="card mb-4 shadow-sm pd-5" (click)="prodDesc(product)">
+      <div class="product-list__image">
+       <img class="card-img-top" height="200" width="150" [src]="'../assets/'+product.image" alt="Card image cap">
+      </div>
+
+      <div class="card-body">
+        <a href=""><h4>{{product.pName}}</h4></a>
+        <p class="card-text">{{product.pDescription}}</p>
+        <div class="text-danger font-weight-bold font-weight-bold" *ngIf="product.pSeller.pQuantity==0">Product Unavailable</div>
+        <div class="badge bg-warning badge-pill topremove text-light mt-0">{{product.pRating}}/5
+          <mat-icon class="iconn">star</mat-icon>
+        </div>
+        <div>
+          {{product.price | currency:'USD'}}
+        </div>
+        <div *ngIf="product.pSeller.pQuantity<10 && product.pSeller.pQuantity>0">
+          <h6 class="text-danger font-weight-bold font-weight-bold">Hurry!Only few left</h6>
+        </div>
+        
+      </div>
+    </div>
+</div>
+  </div>
+    </div>
+  <div *ngIf="!searched">
+    <span><h4>No Results found<mat-icon>&nbsp;&nbsp;search</mat-icon></h4></span>
+    <!-- <div *ngIf="viewall"> -->
+      <br><br><br>
+      <mat-divider></mat-divider>
+      <br><br>
+      <h4>All Products</h4>
+      <div class="container">
+      <div class="row product-list" style="margin: 1em 0;">         
+    
+    <div class="col-sm-12 col-md-6 col-lg-4 product-list__item" *ngFor="let product of allprod; let i = index;">
+      <div class="card mb-4 shadow-sm pd-5" (click)="prodDesc(product)">
+        <div class="product-list__image">
+         <img class="card-img-top" height="200" width="150" [src]="'../assets/'+product.image" alt="Card image cap">
+        </div>
+
+        <div class="card-body">
+          <a href=""><h4>{{product.pName}}</h4></a>
+          <p class="card-text">{{product.pDescription}}</p>
+          <div class="text-danger font-weight-bold" *ngIf="product.pSeller.pQuantity==0">Product Unavailable</div>
+          <div class="badge bg-warning badge-pill topremove text-light mt-0">{{product.pRating}}/5
+            <mat-icon class="iconn">star</mat-icon>
+          </div>&nbsp;<span class="text-danger font-weight-bold" *ngIf="product.pSeller.pQuantity==0"></span>
+          <div>
+            {{product.price | currency:'USD'}}
+          </div>
+          <div *ngIf="product.pSeller.pQuantity<10 && product.pSeller.pQuantity>0">
+            <h6 class="text-danger font-weight-bold font-weight-bold">Hurry!Only few left</h6>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+  <!-- </div> -->
+  <!-- </h6><a [router-link]="[dashboard]">Go back to home page</a><h6> -->
+  </div>
+</div>
